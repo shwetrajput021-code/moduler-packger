@@ -18,18 +18,16 @@ def UI():
 
         choice = input("Enter your choice: ")
 
-        match choice:
-
-            case 1:
+        if choice == "1":
 
                 unique_id = uuid_gen.generate_uuid()
 
                 print("Generated UUID:", unique_id)
 
-            case 2:
+        elif choice == "2":
 
-                    uuid_gen.back_to_main_menu()
-                    break
+                back_menu = uuid_gen.back_to_main_menu()
+                break
 
-            case _:
-                print("Invalid choice.")
+        else:
+            print("Invalid choice.")
